@@ -10,7 +10,7 @@ let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Warriyo - Mortals [NCS Release]", filePath: "https://soundcloud.com/prince-raj-592251973/1a1?si=44e63f9bb39b44c3a4ccf04b7cba411c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing", coverPath: "https://soundcloud.com/prince-raj-592251973/1a1"},
+    {songName: "Warriyo - Mortals [NCS Release]", filePath: "https://soundcloud.com/prince-raj-592251973/1a1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&si=82bb0eb662b444edad7e6b17c4cad3cd", coverPath: "https://soundcloud.com/prince-raj-592251973/1a1"},
     {songName: "Cielo - Huma-Huma", filePath: "songs/2.mp3", coverPath: "covers/2.jpg"},
     {songName: "DEAF KEV - Invincible [NCS Release]-320k", filePath: "songs/3.mp3", coverPath: "covers/3.jpg"},
     {songName: "Different Heaven & EH!DE - My Heart [NCS Release]", filePath: "songs/4.mp3", coverPath: "covers/4.jpg"},
