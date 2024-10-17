@@ -1,53 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet');
 body{
     background-color: antiquewhite;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    height: 65px;
-    background-color: black; /* Nav background color */
-    color: white; /* Text color */
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-}
-
-nav ul li {
-    padding: 0 12px;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.3rem;
-}
-
-/* Signature style */
-.designer {
-    font-family: 'Great Vibes', cursive;
-    font-size: 1.5rem; /* Font size */
-    color: #2c08f8; /* Color for designer text */
-    padding-left: 20px; /* Spacing */
-    transition: transform 0.3s, color 0.3s; /* Animation for hover */
-}
-
-.designer:hover {
-    transform: scale(1.1); /* Scale effect on hover */
-    color: #ffafbd; /* Change color on hover */
 }
 
 *{
@@ -166,23 +120,3 @@ nav ul li{
       background-color: red;
     }
   }
-  .about {
-    padding: 20px;
-    background-color: #f4f4f4;
-    color: #333;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-.about h1, .about h2 {
-    color: #222;
-}
-.about {
-    padding: 20px;
-    background-color: #f4f4f4;
-    color: #333;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-.about h1, .about h2 {
-    color: #222;
-}
