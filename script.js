@@ -64,6 +64,24 @@ songItems.forEach((element, i)=>{
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
 });
 
+function loadSongs() {
+    const songItemContainer = document.getElementById('songItemContainer');
+
+songs.forEach(song => {
+        const songItem = document.createElement('div');
+        songItem.className = 'songItem';
+        songItem.innerHTML = `
+            <h3>${song.songName}</h3>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${song.trackId}&color=%23ff5500&auto_play=false&hide_related=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+        `;
+        songItemContainer.appendChild(songItem);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', loadSongs);
+
 // Automatically play the first song when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     playSong(songIndex); // Play the first song
