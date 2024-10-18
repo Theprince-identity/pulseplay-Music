@@ -1,5 +1,13 @@
 // Initialize the Variables
-let soundCloudIframe = document.querySelector('iframe'); // Select the SoundCloud iframe
+
+let soundCloudIframes = document.querySelectorAll('iframe'); // Select all SoundCloud iframes
+let currentIframeIndex = 0;
+let widget = SC.Widget(soundCloudIframes[currentIframeIndex]); // Create SoundCloud Widget instance for first song
+let masterPlay = document.getElementById('masterPlay');
+let myProgressBar = document.getElementById('myProgressBar');
+let gif = document.getElementById('gif');
+let masterSongName = document.getElementById('masterSongName');
+ // Select the SoundCloud iframe
 let widget = SC.Widget(soundCloudIframe); // Create SoundCloud Widget instance
 
 let masterPlay = document.getElementById('masterPlay');
@@ -60,4 +68,32 @@ widget.bind(SC.Widget.Events.PLAY, function() {
     widget.getCurrentSound(function(sound) {
         masterSongName.innerText = sound.title; // Update track title when playing
     });
+});
+
+// Function to switch between songs and sync progress
+function playSongAtIndex(index) {
+    widget = SC.Widget(soundCloudIframes[index]);
+    currentIframeIndex = index;
+    widget.bind(SC.Widget.Events.PLAY_PROGRESS, function(event) {
+        let progress = event.relativePosition * 100;
+        myProgressBar.value = progress;
+    });
+    widget.bind(SC.Widget.Events.PLAY, function() {
+        widget.getCurrentSound(function(sound) {
+            masterSongName.innerText = sound.title;
+        });
+    });
+    widget.play(); // Automatically play the song when switched
+}
+
+// Function to automatically play the next song when one finishes
+widget.bind(SC.Widget.Events.FINISH, function() {
+    if (currentIframeIndex < soundCloudIframes.length - 1) {
+        playSongAtIndex(currentIframeIndex + 1); // Play next song
+    }
+});
+
+// Restrict external links from SoundCloud iframe
+soundCloudIframes.forEach(iframe => {
+    iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin'); // Restrict external navigation
 });
