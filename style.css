@@ -29,10 +29,6 @@ nav ul {
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-iframe {
-    visibility: hidden; /* This will hide the entire iframe */
-}
-
 nav ul li {
     padding: 0 12px;
 }
