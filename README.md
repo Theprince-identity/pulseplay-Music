@@ -1,5 +1,8 @@
 # Pulseplay-Music
 # PulsePlay - Your Favourite Music Player 🎵
+
+Check out App : https://pulseplay-by-prince.netlify.app/
+
 PulsePlay is a web-based music player built using HTML, CSS, and JavaScript, integrating SoundCloud for song streaming. The player offers a simple and elegant interface, allowing users to control playback, track progress, and enjoy uninterrupted music streaming.
 
 Features
