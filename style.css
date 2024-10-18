@@ -137,11 +137,6 @@ nav ul li {
 }
 
 @media only screen and (max-width: 768px) {
-    .soundcloud-icon {
-        width: 20px; /* Reduce the size of the SoundCloud logo */
-        height: 20px;
-        margin-left: 5px;
-        }
     body {
         background-color: antiquewhite;
     }
