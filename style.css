@@ -3,11 +3,14 @@
 
 body {
     background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+    overflow-x: hidden;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 
 nav {
@@ -17,10 +20,13 @@ nav {
 nav ul {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     list-style-type: none;
-    height: 65px; /* Keep the height as is */
+    height: 65px;
     background-color: black;
     color: white;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 nav ul li {
@@ -46,14 +52,19 @@ nav ul li {
     color: white;
     font-family: 'Varela Round', sans-serif;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 23px auto;
-    width: 70%;
+    width: 90%; /* Make it responsive */
+    max-width: 1200px;
     border-radius: 12px;
-    padding: 34px;
+    padding: 20px;
     background-image: url('bg.jpg');
+    background-size: cover; /* Ensure the background image covers the container */
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-/* Other styling for your application */
 
 .bottom {
     position: sticky;
@@ -65,23 +76,29 @@ nav ul li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%; /* Make bottom bar span full width */
+    padding: 10px;
 }
 
 .icons {
-    margin-top: 14px;
+    margin-top: 10px;
 }
 
 .icons i {
     cursor: pointer;
+    font-size: 24px;
+    margin: 0 10px;
 }
 
 #myProgressBar {
-    width: 50vw;
+    width: 80%; /* Make progress bar more flexible */
     cursor: pointer;
+    max-width: 600px;
 }
 
 .songItemContainer {
-    margin-top: 74px;
+    margin-top: 50px;
+    width: 100%;
 }
 
 .songItem {
@@ -93,16 +110,19 @@ nav ul li {
     justify-content: space-between;
     align-items: center;
     border-radius: 34px;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
 }
 
 .songItem img {
     width: 43px;
-    margin: 0 23px;
-    border-radius: 34px;
+    margin-right: 15px;
+    border-radius: 50%;
 }
 
 .timestamp {
-    margin: 0 23px;
+    margin-left: auto;
+    padding-left: 20px;
 }
 
 .timestamp i {
@@ -110,18 +130,34 @@ nav ul li {
 }
 
 .songInfo {
-    position: absolute;
-    left: 10vw;
+    display: flex;
+    align-items: center;
     font-family: 'Varela Round', sans-serif;
-}
-
-.songInfo img {
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
 }
 
 @media only screen and (max-width: 768px) {
     body {
-        background-color: red;
+        background-color: antiquewhite;
+    }
+
+    .container {
+        width: 95%; /* Make container full width on smaller screens */
+        padding: 20px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-direction: column; /* Stack nav items vertically on small screens */
+        height: auto;
+    }
+
+    .songItem {
+        flex-direction: column;
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    #myProgressBar {
+        width: 90%; /* Make progress bar full width on smaller screens */
     }
 }
