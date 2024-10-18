@@ -1,5 +1,3 @@
-// Initialize the Variables
-
 let soundCloudIframes = document.querySelectorAll('iframe'); // Select all SoundCloud iframes
 let currentIframeIndex = 0;
 let widget = SC.Widget(soundCloudIframes[currentIframeIndex]); // Create SoundCloud Widget instance for first song
