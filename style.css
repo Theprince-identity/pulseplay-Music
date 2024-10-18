@@ -128,7 +128,7 @@ nav ul li {
 }
 
 .songInfo {
-    display: none;
+    display: flex;
     align-items: center;
     font-family: 'Varela Round', sans-serif;
 }
