@@ -21,7 +21,8 @@ nav ul {
     height: 65px;
     background-color: black;
     color: white;
-    white-space: nowrap; /* Prevents text from wrapping */
+    width: 100%; /* Ensures the nav bar uses full width */
+    justify-content: space-between; /* Spreads the items evenly */
 }
 
 nav ul li {
@@ -38,12 +39,16 @@ nav ul li {
     align-items: center;
     font-weight: bolder;
     font-size: 1.3rem;
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .brand h1 {
     font-family: 'Varela Round', sans-serif;
     font-size: 1.2rem; /* Adjust this if needed */
-    white-space: nowrap; /* Ensure the slogan stays in one line */
+    white-space: nowrap; /* Ensures text doesn't wrap */
+    margin-left: 10px;
 }
 
 .container {
